@@ -10,12 +10,13 @@
 	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>HeaderWithUser</title>
 </head>
+
 <body>
 
 <!-- 导航栏 -->
-<header class="navbar navbar-default navbar-fixed-top">
-<nav class="navbar navbar-default" role="navigation">
-    <div class="container">
+<header class="navbar navbar-default navbar-fixed-top"  style="background-color:#000">
+<nav class="navbar navbar-default" role="navigation"  style="background-color:#000">
+    <div class="container"  style="background-color:#000">
     <div class="navbar-header">
     <button data-toggle="collapse" data-target="#header-navbar" type="button" class="navbar-toggle">
     <span class="sr-only">Toggle Navigation</span><span class="icon-bar"></span><span class="icon-bar"></span>
@@ -38,6 +39,7 @@
 					 <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
+                    <li><a href="#">我的</a></li>
                     <li class="divider"></li>
                     <li><a href="process_out.jsp">退出登录</a></li>
                 </ul>

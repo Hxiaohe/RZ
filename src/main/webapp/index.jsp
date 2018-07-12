@@ -17,11 +17,20 @@
 <%} %>
 
 <link href="CSS/webuploader.css" type="text/css" rel="stylesheet"/>
+<link href="CSS/index.css" type="text/css" rel="stylesheet"/>
 <script type="text/javascript" src="Scripts/webuploader.min.js"></script>
 
-<div class="container">
+<div class="container" id="ss">
+    <div  id="pick">
+        <div class="row">
+            <div id="filePicker"  class="cp_img_jia"><p><span class="glyphicon glyphicon-folder-open"></span>选择图片</p></div>
+        </div>
 
+        <div class="row">  <button id="ctlBtn" class="btn btn-primary up_img_jia"><p><span class="glyphicon glyphicon-open"></span>开始上传</p></button></div>
+    </div>
+    </div>
 
+<div class="background">
     <div class="row">
 
         <div id="file">
@@ -34,14 +43,6 @@
         </div>
 
     </div>
-    <div class="row">
-        <div class="cp_img_jia" id="filePicker">选择图片</div>
-
-    </div>
-    <div class="row">  <button id="ctlBtn" class="btn btn-default">开始上传</button></div>
-
-</div>
-<div>
 </div>
 <%@ include file="Footer.jsp"%>
 
@@ -56,8 +57,8 @@
 
                  // 缩略图大小
 
-                 thumbnailWidth = 100,
-                 thumbnailHeight = 100,
+                 thumbnailWidth = 90,
+                 thumbnailHeight = 90,
 
                  // Web Uploader实例
                  uploader;
@@ -93,7 +94,7 @@
              uploader.on('fileQueued', function (file) {
                  var $li = $(
 
-                     '<div id="' + file.id + '" class="cp_img">' +
+                     '<div id="' + file.id + '" class="cp_img col-lg-1">' +
                      '<img>' +
                      '<div class="cp_img_jian"></div></div>'
 
